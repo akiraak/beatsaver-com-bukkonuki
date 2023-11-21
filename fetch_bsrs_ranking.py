@@ -35,5 +35,6 @@ def main():
     with open("bsrs_ranking.json", "w", encoding="utf-8") as json_file:
         json.dump(bsrs, json_file, ensure_ascii=False, indent=4)
 
+
 if __name__ == "__main__":
     main()
