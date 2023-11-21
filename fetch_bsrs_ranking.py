@@ -18,7 +18,7 @@ def main():
         response = requests.get(url)
         if response.status_code == 200:
             response_json = response.json()
-            for bsr in response_json['docs']:
+            for bsr in response_json["docs"]:
                 bsrs.append(bsr)
         else:
             print(f"Error fetching data for {url}")
@@ -28,8 +28,12 @@ def main():
     # id, タイトルなどをファイルに保存
     with open("bsrs_ranking_sumarry.txt", "w", encoding="utf-8") as list_file:
         for i, bsr in enumerate(bsrs):
-            print(f"{i + 1}: {bsr['id']} [+{bsr['stats']['upvotes']} {bsr['stats']['score']}]: {bsr['name']}")
-            list_file.write(f"{i + 1}: {bsr['id']} [+{bsr['stats']['upvotes']} {bsr['stats']['score']}]: {bsr['name']}\n")
+            print(
+                f"{i + 1}: {bsr['id']} [+{bsr['stats']['upvotes']} {bsr['stats']['score']}]: {bsr['name']}"
+            )
+            list_file.write(
+                f"{i + 1}: {bsr['id']} [+{bsr['stats']['upvotes']} {bsr['stats']['score']}]: {bsr['name']}\n"
+            )
 
     # 全ての情報をファイルに保存
     with open("bsrs_ranking.json", "w", encoding="utf-8") as json_file:
