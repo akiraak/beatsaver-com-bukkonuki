@@ -1,0 +1,43 @@
+ID: 1b06c
+Name: My name is elite ☆ - sakura miko マイネームイズエリート☆ さくらみこ
+Description: My name is elite ☆ origin by sakura miko
+
+マイネームイズエリート☆ by さくらみこ
+
+This map is dancy.
+
+preview: https://youtu.be/el54FOlnVkg
+Mapper: misterlihao
+BPM: 181.0
+Duration: 03:57
+👍Upvotes: 34
+👎Downvotes: 3
+Score: 0.8546
+tags: 
+downloadURL: https://r2cdn.beatsaver.com/509a5e52fd3db260b32d6dd45402763385b32916.zip
+coverURL: https://na.cdn.beatsaver.com/509a5e52fd3db260b32d6dd45402763385b32916.jpg
+previewURL: https://na.cdn.beatsaver.com/509a5e52fd3db260b32d6dd45402763385b32916.mp3
+bsaber.com: https://bsaber.com/songs/1b06c/
+beatsaver.com: https://beatsaver.com/maps/1b06c
+Viewer: https://allpoland.github.io/ArcViewer/?id=1b06c
+createdAt: 2021-08-08T14:46:25.577524Z
+updatedAt: 2021-08-08T14:46:25.577524Z
+lastPublishedAt: 2021-08-08T14:46:25.577524Z
+
+--- Maps ---
+Expert:
+  Offset: 1.0
+  NJS: 14.0
+  Notes: 577
+  Bombs: 615
+  Obstacles: 170
+  NPS: 2.519
+  Length: 691.0
+  Characteristic: Standard
+  Events: 1116
+  Chroma: False
+  Me: False
+  Ne: False
+  Cinema: False
+  Seconds: 229.061
+  MaxScore: 523595

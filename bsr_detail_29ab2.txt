@@ -1,0 +1,61 @@
+ID: 29ab2
+Name: Ado - Tot Musica (from ONE PIECE FILM RED)
+Description: ᚷᚨᚺ ᛉᚨᚾ ᛏᚨᚲ ᚷᚨᚺ ᛉᚨᚾ ᛏᚨᛏ ᛏᚨᛏ ᛒᚱᚨᚲ
+
+Cinema is recommend.
+
+Expert+ preview : https://youtu.be/lN1p2KrCJ_o
+
+Any feedback is appreciated. You can contact me on Discord!
+NoteIIEvil#4252
+Enjoy and Have fun!
+Mapper: note2evil
+BPM: 130.0
+Duration: 03:16
+👍Upvotes: 1034
+👎Downvotes: 10
+Score: 0.981
+tags: ['balanced', 'anime', 'rock']
+downloadURL: https://r2cdn.beatsaver.com/bfe7e9b841574b7950d82e80fd80d8d59e710e07.zip
+coverURL: https://na.cdn.beatsaver.com/bfe7e9b841574b7950d82e80fd80d8d59e710e07.jpg
+previewURL: https://na.cdn.beatsaver.com/bfe7e9b841574b7950d82e80fd80d8d59e710e07.mp3
+bsaber.com: https://bsaber.com/songs/29ab2/
+beatsaver.com: https://beatsaver.com/maps/29ab2
+Viewer: https://allpoland.github.io/ArcViewer/?id=29ab2
+createdAt: 2022-09-06T02:53:24.432244Z
+updatedAt: 2022-09-08T03:11:46.269920Z
+lastPublishedAt: 2022-09-06T03:14:53.365854Z
+
+--- Maps ---
+Expert:
+  Offset: -0.4
+  NJS: 16.0
+  Notes: 627
+  Bombs: 70
+  Obstacles: 447
+  NPS: 3.396
+  Length: 400.0
+  Characteristic: Standard
+  Events: 4351
+  Chroma: True
+  Me: False
+  Ne: False
+  Cinema: True
+  Seconds: 184.615
+  MaxScore: 569595
+ExpertPlus:
+  Offset: -0.676
+  NJS: 18.0
+  Notes: 778
+  Bombs: 100
+  Obstacles: 445
+  NPS: 4.214
+  Length: 400.0
+  Characteristic: Standard
+  Events: 4351
+  Chroma: True
+  Me: False
+  Ne: False
+  Cinema: True
+  Seconds: 184.615
+  MaxScore: 708515
