@@ -43,7 +43,7 @@ def main():
         time.sleep(5)
 
     # id, タイトルなどをファイルに保存
-    with open("bsrs_user_misterlihao_sumarry.txt", "w", encoding="utf-8") as list_file:
+    with open("bsrs_mapper_misterlihao_sumarry.txt", "w", encoding="utf-8") as list_file:
         for i, bsr in enumerate(bsrs):
             print(
                 f"{i + 1}: {bsr['id']} [+{bsr['stats']['upvotes']} {bsr['stats']['score']}]: {bsr['name']}"
@@ -53,7 +53,7 @@ def main():
             )
 
     # 全ての情報をファイルに保存
-    with open("bsrs_user_misterlihao.json", "w", encoding="utf-8") as json_file:
+    with open("bsrs_mapper_misterlihao.json", "w", encoding="utf-8") as json_file:
         json.dump(bsrs, json_file, ensure_ascii=False, indent=4)
 
 

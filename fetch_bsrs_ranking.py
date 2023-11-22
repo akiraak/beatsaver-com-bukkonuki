@@ -6,8 +6,8 @@ import time
 def main():
     FROM_DATA = "2021-09-01"
     BARS_PER_PAGE = 20
-    FETCH_PAGES = 1000
-    PAGES = int(FETCH_PAGES / BARS_PER_PAGE)
+    FETCH_BARS = 1000
+    PAGES = int(FETCH_BARS / BARS_PER_PAGE)
     bsrs = []
 
     for i in range(PAGES):

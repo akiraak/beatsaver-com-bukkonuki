@@ -3,8 +3,8 @@ import json
 
 
 def get_bsr(bar_id: str):
-    bsrs_json_file = "bsrs_ranking.json"
-    #bsrs_json_file = "bsrs_user_misterlihao.json"
+    #bsrs_json_file = "bsrs_ranking.json"
+    bsrs_json_file = "bsrs_mapper_misterlihao.json"
     with open(bsrs_json_file, "r", encoding="utf-8") as json_file:
         bsrs = json.load(json_file)
     for bsr in bsrs:
@@ -15,6 +15,9 @@ def get_bsr(bar_id: str):
 
 def show_detail(bar_id: str):
     bsr = get_bsr(bar_id)
+    if not bsr:
+        print(f"bsr not found: {bar_id}")
+        return
 
     print(f"ID: {bsr['id']}")
     print(f"Name: {bsr['name']}")

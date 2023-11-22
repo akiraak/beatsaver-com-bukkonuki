@@ -7,6 +7,7 @@ mypy-extensions==1.0.0
 packaging==23.2
 pathspec==0.11.2
 platformdirs==4.0.0
+pydub==0.25.1
 requests==2.31.0
 tomli==2.0.1
 typing_extensions==4.8.0
