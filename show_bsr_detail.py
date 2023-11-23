@@ -1,15 +1,22 @@
 import argparse
 import json
+import os
 
 
 def get_bsr(bar_id: str):
-    #bsrs_json_file = "bsrs_ranking.json"
-    bsrs_json_file = "bsrs_mapper_misterlihao.json"
-    with open(bsrs_json_file, "r", encoding="utf-8") as json_file:
-        bsrs = json.load(json_file)
-    for bsr in bsrs:
-        if bsr["id"] == bar_id:
-            return bsr
+    bsrs_json_files = ["bsrs_ranking.json", "bsrs_mapper_misterlihao.json"]
+
+    for bsrs_json_file in bsrs_json_files:
+        if not os.path.exists(bsrs_json_file):
+            print(f"! File not found: {bsrs_json_file}")
+            continue
+
+        with open(bsrs_json_file, "r", encoding="utf-8") as json_file:
+            bsrs = json.load(json_file)
+        for bsr in bsrs:
+            if bsr["id"] == bar_id:
+                return bsr
+
     return None
 
 

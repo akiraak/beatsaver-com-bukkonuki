@@ -3,6 +3,7 @@ import requests
 import time
 
 
+# マッパーさんの譜面を取得する
 def user_bsr_ids(user_id: str):
     url = f"https://api.beatsaver.com/users/id/{user_id}/playlist"
     bsr_ids = []
@@ -19,11 +20,13 @@ def user_bsr_ids(user_id: str):
 
 
 def main():
-    user_id = "4284977"  # misterlihao
-    bsr_ids = user_bsr_ids(user_id)
-
     BSRS_PER_ONCE = 50
+    USER_ID = "4284977"  # misterlihao
+
+    bsr_ids = user_bsr_ids(USER_ID)
     bsrs = []
+
+    # 譜面データを取得する
     for i in range(0, len(bsr_ids), BSRS_PER_ONCE):
         fetch_ber_ids = bsr_ids[i : i + BSRS_PER_ONCE]
 

@@ -63,21 +63,26 @@ def main():
     if not os.path.exists(MUSIC_DIR):
         os.makedirs(MUSIC_DIR)
 
-    bsrs_json_file = "bsrs_ranking.json"
-    #bsrs_json_file = "bsrs_mapper_misterlihao.json"
-    with open(bsrs_json_file, "r", encoding="utf-8") as json_file:
-        bsrs = json.load(json_file)
+    bsrs_json_files = ["bsrs_ranking.json", "bsrs_mapper_misterlihao.json"]
 
-    # Ensure the TEMP_DIR exists
-    if not os.path.exists(TEMP_DIR):
-        os.makedirs(TEMP_DIR)
+    for bsrs_json_file in bsrs_json_files:
+        if not os.path.exists(bsrs_json_file):
+            print(f"! File not found: {bsrs_json_file}")
+            continue
 
-    for i, bsr in enumerate(bsrs):
-        print(f"{i} {bsr['id']} {bsr['versions'][0]['downloadURL']}")
-        get_bsr_music(bsr_id=bsr["id"], name=bsr["name"], zip_url=bsr["versions"][0]["downloadURL"])
-        #break
-        #if i > 10:
-        #    break
+        with open(bsrs_json_file, "r", encoding="utf-8") as json_file:
+            bsrs = json.load(json_file)
+
+        # Ensure the TEMP_DIR exists
+        if not os.path.exists(TEMP_DIR):
+            os.makedirs(TEMP_DIR)
+
+        for i, bsr in enumerate(bsrs):
+            print(f"{i} {bsr['id']} {bsr['versions'][0]['downloadURL']}")
+            get_bsr_music(bsr_id=bsr["id"], name=bsr["name"], zip_url=bsr["versions"][0]["downloadURL"])
+            #break
+            #if i > 10:
+            #    break
 
     # List all files in the MUSIC_DIR and write to musics.txt
     with open("musics.txt", "w", encoding="utf-8") as f:

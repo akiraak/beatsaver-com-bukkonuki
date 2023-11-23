@@ -4,15 +4,17 @@ import time
 
 
 def main():
-    FROM_DATA = "2021-09-01"
+    FROM_DATA = "2022-12-01"
+    TO_DATA = "2023-11-30"
     BARS_PER_PAGE = 20
-    FETCH_BARS = 1000
+    FETCH_BARS = 10000
     PAGES = int(FETCH_BARS / BARS_PER_PAGE)
     bsrs = []
 
+    # 譜面データを取得する
     for i in range(PAGES):
         page = i
-        url = f"https://api.beatsaver.com/search/text/{page}?from={FROM_DATA}&sortOrder=Rating"
+        url = f"https://api.beatsaver.com/search/text/{page}?from={FROM_DATA}&to={TO_DATA}&sortOrder=Rating"
 
         print(f"Fetching page: {page + 1} / {PAGES}")
         response = requests.get(url)
