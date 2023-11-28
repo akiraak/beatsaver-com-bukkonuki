@@ -3,7 +3,8 @@ import json
 import os
 
 
-def get_bsrs(min_nps: float, max_nps:float):
+# min_nps から max_nps のマップを含む曲を取得する
+def get_bsrs(min_nps: float, max_nps: float):
     bsrs_json_files = ["bsrs_ranking.json", "bsrs_mapper_misterlihao.json"]
 
     bsrs = []
@@ -24,7 +25,7 @@ def get_bsrs(min_nps: float, max_nps:float):
     return bsrs
 
 
-def show_bsrs(min_nps: float, max_nps:float):
+def show_bsrs(show_count: int, min_nps: float, max_nps:float):
     print(f"min_nps: {min_nps} max_nps: {max_nps}")
     print("")
 
@@ -33,9 +34,7 @@ def show_bsrs(min_nps: float, max_nps:float):
     # bsr['stats']['score'] で降順にソート
     bsrs = sorted(bsrs, key=lambda bsr: bsr['stats']['score'], reverse=True)
 
-    SHOW_BSRS = 10
-
-    for bsr in bsrs[:SHOW_BSRS]:
+    for bsr in bsrs[:show_count]:
         hit = False
         for bsr_map in bsr['versions'][0]['diffs']:
             if min_nps <= bsr_map['nps'] and bsr_map['nps'] <= max_nps:
@@ -51,16 +50,17 @@ def show_bsrs(min_nps: float, max_nps:float):
                     print(f"[{bsr_map['difficulty']} NPS: {bsr_map['nps']}]", end=" ")
             print(f"Duration: {minutes:02d}:{seconds:02d} BPM: {bsr['metadata']['bpm']}\n")
 
-    print(f"Showed {SHOW_BSRS} / {len(bsrs)} bsrs")
+    print(f"Showed {show_count} / {len(bsrs)} bsrs")
 
 
 def main():
     parser = argparse.ArgumentParser(description="NPSで絞り込んだ譜面を表示する")
+    parser.add_argument("--show-bsrs", type=int, help="表示する譜面数")
     parser.add_argument("--min-nps", type=float, help="Min NPS")
     parser.add_argument("--max-nps", type=float, help="Max NPS")
     args = parser.parse_args()
 
-    show_bsrs(min_nps=args.min_nps, max_nps=args.max_nps)
+    show_bsrs(show_count=args.show_bsrs, min_nps=args.min_nps, max_nps=args.max_nps)
 
 
 if __name__ == "__main__":
