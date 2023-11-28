@@ -28,7 +28,7 @@ def main():
         time.sleep(5)
 
     # id, タイトルなどをファイルに保存
-    with open("bsrs_ranking_sumarry.txt", "w", encoding="utf-8") as list_file:
+    with open("bsrs_ranking_summary.txt", "w", encoding="utf-8") as list_file:
         for i, bsr in enumerate(bsrs):
             print(
                 f"{i + 1}: {bsr['id']} [+{bsr['stats']['upvotes']} {bsr['stats']['score']}]: {bsr['name']}"
