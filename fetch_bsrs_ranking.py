@@ -1,4 +1,5 @@
 import json
+import math
 import requests
 import time
 
@@ -8,7 +9,7 @@ def main():
     TO_DATA = "2023-11-30"
     BARS_PER_PAGE = 20
     FETCH_BARS = 10000
-    PAGES = int(FETCH_BARS / BARS_PER_PAGE)
+    PAGES = math.ceil(FETCH_BARS / BARS_PER_PAGE)
     bsrs = []
 
     # 譜面データを取得する
